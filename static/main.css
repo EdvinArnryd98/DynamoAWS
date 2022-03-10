@@ -1,0 +1,67 @@
+body {
+    width: 1000px;
+    margin: 0 auto;
+    font-size: 1.5em;
+    background-color: #41413e;
+    font-family: Arial;
+}
+
+h1 {
+    display: flex;
+    justify-content: space-around;
+    color: antiquewhite;
+    text-shadow: 4px 4px black;
+}
+
+.content{
+    display: flex;
+    justify-content: space-around;
+}
+
+table {
+    width: 80%;
+    text-align: center;
+}
+
+td {
+    border: 2px black solid;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.tdWater{
+    background-color: cadetblue;
+}
+
+.tdAir{
+    background-color: whitesmoke;
+}
+
+.tdEarth{
+    background-color: #775036;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-around;
+}
+
+button {
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #345759;
+    color: white;
+    font-size: 1em;
+    font-family: 'Consolas', 'Deja Vu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #1c353a;
+}
+
+.titles {
+    font-style: italic;
+    color: antiquewhite;
+    text-shadow: 4px 4px black;
+}

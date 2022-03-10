@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}" />
+    <title>Garden</title>
+</head>
+<body>
+<h1>Garden Temperature Table</h1>
+<div class="content">
+    <table>
+        <tr>
+            <th class="titles">Sensor</th>
+            <th class="titles">Date & Time</th>
+            <th class="titles">°C</th>
+            <th class="titles">°F</th>
+        </tr>
+        {% for reading in readings %}
+            <tr id="allSensors">
+                    {% if reading['sensor'] == 'Water' %}
+                        <td class="tdWater">
+                            {{ reading['sensor'] }}
+                        </td>
+                        <td class="tdWater">
+                            {{ reading['datetime'] }}
+                        </td>
+                        <td class="tdWater">
+                            {{ reading['temp'] }}
+                        </td>
+                        <td class="tdWater">
+                            {{ reading['farenheit'] }}
+                        </td>
+                    {% elif reading['sensor'] == 'Air' %}
+                        <td class="tdAir">
+                            {{ reading['sensor'] }}
+                        </td>
+                        <td class="tdAir">
+                            {{ reading['datetime'] }}
+                        </td>
+                        <td class="tdAir">
+                            {{ reading['temp'] }}
+                        </td>
+                        <td class="tdAir">
+                            {{ reading['farenheit'] }}
+                        </td>
+                    {% elif reading['sensor'] == 'Earth' %}
+                        <td class="tdEarth">
+                            {{ reading['sensor'] }}
+                        </td>
+                        <td class="tdEarth">
+                            {{ reading['datetime'] }}
+                        </td>
+                        <td class="tdEarth">
+                            {{ reading['temp'] }}
+                        </td>
+                        <td class="tdEarth">
+                            {{ reading['farenheit'] }}
+                        </td>
+                    {% endif %}
+        {% endfor %}
+    </table>
+</div>
+</body>
+</html>
+
